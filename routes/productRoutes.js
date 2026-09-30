@@ -11,51 +11,27 @@ const {
 
 
 // GET all products
-router.get(
-  '/products',
-  cacheMiddleware,
-  productController.getProducts
-);
+router.get('/products',cacheMiddleware,productController.getProducts);
 
 
 // GET product by ID
-router.get(
-  '/products/:id',
-  cacheMiddleware,
-  productController.getProductById
-);
+router.get('/products/:id',cacheMiddleware,productController.getProductById);
 
 
 // POST product
-router.post(
-  '/products',
-  invalidateCache,
-  productController.createProduct
-);
+router.post('/products',invalidateCache,productController.createProduct);
 
 
 // PUT product
-router.put(
-  '/products/:id',
-  invalidateCache,
-  productController.updateProduct
-);
+router.put('/products/:id',invalidateCache,productController.updateProduct);
 
 
 // PATCH product
-router.patch(
-  '/products/:id',
-  invalidateCache,
-  productController.patchProduct
-);
+router.patch('/products/:id',invalidateCache,productController.patchProduct);
 
 
 // DELETE product
-router.delete(
-  '/products/:id',
-  invalidateCache,
-  productController.deleteProduct
-);
+router.delete('/products/:id',invalidateCache,productController.deleteProduct);
 
 
 module.exports = router;

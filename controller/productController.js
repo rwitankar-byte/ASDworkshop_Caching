@@ -1,8 +1,6 @@
 const productService = require('../services/productService');
 
-const {
-  storeCache
-} = require('../middleware/cacheMiddleware');
+const {storeCache} = require('../middleware/cacheMiddleware');
 
 
 // GET /products

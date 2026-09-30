@@ -1,7 +1,4 @@
-const {
-  readProducts,
-  writeProducts
-} = require('../database/productDatabase');
+const {readProducts,writeProducts} = require('../database/productDatabase');
 
 async function getAllProducts() {
   return await readProducts();
